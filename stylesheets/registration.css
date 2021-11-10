@@ -1,0 +1,464 @@
+@font-face {
+    font-family: "BlackChancery";
+    src: url("../fonts/blackchancery/BLKCHCRY.TTF");
+}
+
+@font-face {
+    font-family: "affirmative";
+    src: url("../fonts/affirmative/Affirmative.ttf");
+}
+
+.registration-container {
+    /* width: 60vw; */
+    /* height: 85vh; */
+    background-image: url("../assets/Bg.png");
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 10px; */
+    padding: 2% 5% 1%;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
+    opacity: 0.95;
+}
+
+.registration-container>h1 {
+    font-family: 'affirmative';
+    font-weight: 500;
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: center;
+    color: #EEEEEE;
+}
+
+
+.input-row {
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-between;
+}
+
+label {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #EEEEEE;
+}
+
+label::after {
+    content: '*';
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    margin: 0 2.5% 5%
+}
+
+input,
+select {
+    border: none;
+    margin: 0 3%;
+    border-bottom: 1px solid rgb(89, 89, 89);
+    background: none;
+    width: 90%;
+    padding: 2%;
+    font-size: 1rem;
+    margin-left: 0;
+    border-color: #C4C4C4;
+    color: white;
+}
+
+input:focus,
+select:focus {
+    outline: 0.5px solid white;
+}
+
+select {
+    font-size: 0.75rem;
+}
+
+
+.input-explanation {
+    margin: 0;
+    padding: 2%;
+    font-family: 'Gilroy', sans-serif;
+    font-size: 0.8rem;
+    width: 96%;
+    position: relative;
+    right: 1px;
+    font-weight: 100;
+    color: #EEEEEE;
+}
+
+
+/* //////////Radio Buttons ////////// */
+
+
+
+.radio-cell:nth-child(1) {
+    margin-top: 0;
+}
+
+.input-column {
+    width: 45%;
+}
+
+.radio-heading {
+    font-family: 'Gilroy-Medium', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: white;
+    font-weight: 800;
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-option:nth-child(2) {
+    margin: 0 10%;
+}
+
+input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    border: black;
+    margin-right: 10px;
+}
+
+input[type="radio"]:focus {
+    outline: none;
+}
+
+.radio-explanation {
+    padding: 1%;
+    margin: 1% 0 4% 0;
+}
+
+.radio-label {
+    font-size: 0.8rem;
+    color: white;
+}
+
+.radio-cell {
+    width: 45%;
+}
+
+
+.not-required::after {
+    content: '';
+}
+
+
+.registration-stand {
+    width: 5vw;
+    height: 4vw;
+    background: linear-gradient(90deg, #FBC926 -0.18%, #FFFBCC 22.22%, #F8F0BB 26.89%, #E7D28E 37.16%, #CCA246 50.22%, #C3922E 54.89%, #EED688 80.09%, #FFFBCC 92.22%);
+}
+
+
+/* ///////////Register Button /////// */
+
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 25px;
+}
+
+.sports {
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.sports::after {
+    content: 'x'
+
+}
+
+#register {
+    margin-right: 0;
+    font-family: 'affirmative';
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+    background-color: rgb(241, 241, 241);
+    border-radius: 3px;
+    border: none;
+    position: relative;
+    border: 1.16px solid #125953;
+    cursor: pointer;
+    color: black;
+    width: 120%;
+    padding: 2% 5%;
+    box-shadow:
+        3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
+        8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
+        16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
+        34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
+        95px 60px 80px rgba(0, 0, 0, 0.059);
+
+}
+
+#register:hover {
+    transform: scale(0.96);
+}
+
+/* .register-button::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    height: 70px;
+    width: 280px;
+    background-color: #0A322F;
+    border-radius: 3px;
+    bottom: -5px;
+} */
+
+
+/* For paragraph in focus
+{
+background-color: black;
+color: white;
+width: 88%;
+} */
+
+
+/* 
+////// SCROLLBAR/// */
+
+
+.modal-body::-webkit-scrollbar-track {
+    background-color:#261939;
+}
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #261939;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgb(241, 241, 241);
+}
+
+
+
+.radio-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    display: unset !important;
+}
+
+select {
+    margin-top: 7.5px;
+}
+
+
+/* FILE UPLOAD  */
+/* 
+.file-upload{
+    justify-content: center;
+} */
+
+
+
+.form-select {
+    background-color: unset !important;
+    color: white !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+    margin-top: 1.5%;
+    width: 90%;
+}
+
+.form-select:active {
+    border: none !important;
+    outline: none !important;
+}
+
+#disclaimer {
+    font-family: 'Gilroy', sans-serif;
+    font-style: italic;
+    color: white;
+    font-weight: 600;
+}
+
+select option:disabled {
+    color: rgb(197, 197, 197);
+    font-style: italic;
+}
+
+
+
+
+/* TEAM MEMBERS */
+
+#team-name{
+    width: 96%;
+}
+
+hr{
+    opacity: 0.35;
+    color: white;
+    height: 2.5px !important;
+    border-radius: 50px;
+    margin: 6% 10% 4%;
+    position: relative !important;
+    right: 10px !important;
+}
+
+#team-members-wrap{
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+}
+
+ul li{
+    margin: 1% 2%;
+}
+
+.add-team-row{
+    display: flex;
+    align-items: center;
+}
+
+.add-team-member{
+    background: #a1a1a149;
+    padding-left: 3%;
+    border-radius: 10px;
+    display: none;
+}
+
+.team-input-explanation{
+    font-size: 0.65rem;
+}
+
+
+#newMemberBtn {    
+    width: 150px;
+}
+
+#newMemberAddBtn {    
+    height: 75px;
+}
+
+.gender-team{
+    background-color: unset !important;
+}
+
+.gender-team option{
+    color: #000;
+}
+
+
+#team-gender-status{
+    color: white;
+    font-weight: 600;
+}
+
+
+/* Media Queries  */
+
+
+@media only screen and (max-width:968px) {
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .registration-container {
+        overflow-y: scroll;
+    }
+
+    .registration-container>h1 {
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+    }
+
+    .input-column {
+        width: 95%;
+    }
+
+    .register-wrapper {
+        justify-content: center;
+    }
+
+    #register {
+        width: unset;
+        font-size: 2rem;
+        margin-left: 0;
+        padding: 5%;
+        position: relative;
+        right: 10px;
+        box-shadow:
+            3.3px 2.1px 2.7px rgba(0, 0, 0, 0.19),
+            8.3px 5.2px 6.9px rgba(0, 0, 0, 0.131),
+            16.8px 10.6px 14.2px rgba(0, 0, 0, 0.106),
+            34.7px 21.9px 29.2px rgba(0, 0, 0, 0.084),
+            95px 60px 80px rgba(0, 0, 0, 0.059);
+
+    }
+
+    .register-button::before {
+        display: none;
+    }
+
+    .input-explanation {
+        font-size: 0.75rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .registration-container {
+        width: initial;
+        padding-bottom: 8%;
+    }
+
+    .input-cell {
+        margin: 2.5% 0;
+    }
+
+    .modal-dialog {
+        max-width: inherit !important;
+    }
+    
+    #newMemberBtn, #newMemberAddBtn{
+        margin-left: 0;
+    }
+    input{
+        width: 100%;
+    }
+    .add-team-row{
+        display: unset !important;
+    }
+    .add-team-member{
+        padding: 10px 20px 20px
+    }
+    hr{
+        display: none;
+    }
+
+}

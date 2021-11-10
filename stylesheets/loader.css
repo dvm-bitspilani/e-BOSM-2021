@@ -1,0 +1,79 @@
+.spinner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 2, 2);
+    position: relative;
+    z-index: 2;
+}
+
+.spin-con {
+    --size: 200px;
+    --thickness: 25px;
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    border-radius: 50%;
+    background-color: #000000;
+    box-shadow: 0 0 30px #7a216e;
+    animation: spinner 2.5s linear infinite;
+}
+
+.spin-con::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to bottom, #7a216e, transparent);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    border-top-left-radius: calc(var(--size)/2);
+    border-bottom-left-radius: calc(var(--size)/2);
+}
+
+.spin-con::after {
+    content: '';
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: var(--thickness);
+    left: var(--thickness);
+    border-radius: 50%;
+    background-color: #000000;
+    box-shadow: 0 0 50px inset #000000;
+}
+
+.ball {
+    width: var(--thickness);
+    height: var(--thickness);
+    --neon-border-color: #7a216e;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7a216e;
+    border-radius: 50%;
+    box-shadow:
+        0 0 .5rem #7a216e,
+        inset 0 0 .5rem #7a216e,
+        0 0 2rem var(--neon-border-color),
+        inset 0 0 2rem var(--neon-border-color),
+        0 0 4rem var(--neon-border-color),
+        inset 0 0 4rem var(--neon-border-color);
+
+}
+
+@keyframes spinner {
+    to {
+        transform: rotateZ(0deg);
+    }
+
+    from {
+        transform: rotateZ(-360deg);
+    }
+}
